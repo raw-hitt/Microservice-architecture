@@ -1,0 +1,32 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/mumbai",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7083
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/mumbai",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/indore",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/indore",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+      ]
+    }
+  ],
+
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7142/"
+  }
+}
